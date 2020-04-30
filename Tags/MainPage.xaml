@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:control="clr-namespace:Tags;assembly=Tags"
+    x:Class="Tags.MainPage"
+    Padding="40"
+    BackgroundColor="White"
+    x:Name="this">
+    <!--<StackLayout>
+        <StackLayout BackgroundColor="Yellow" VerticalOptions="StartAndExpand" Orientation="Horizontal" Spacing="0" BindableLayout.ItemsSource="{Binding MainTags}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Green" Spacing="0">
+                        <control:TagsView  Margin="0"/>
+                        </StackLayout>
+                    </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </StackLayout>-->
+    <StackLayout>
+        <StackLayout BackgroundColor="Yellow" Orientation="Vertical" Spacing="0" BindableLayout.ItemsSource="{Binding TagLevels}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                            <StackLayout BackgroundColor="Yellow" Orientation="Horizontal" Spacing="0" BindableLayout.ItemsSource="{Binding Tags}">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                             <Button x:Name="btn" Text="{Binding Text}" WidthRequest="100" Command="{Binding Source={x:Reference this}, Path = BindingContext.SelectedCommand}" CommandParameter="{Binding .}" HeightRequest="40" HorizontalOptions="Center" BackgroundColor="Red" TextColor="Black" CornerRadius="20"/>
+                                        </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                    </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

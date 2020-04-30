@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:Tags;assembly=Tags"
+             x:Class="Tags.TagsView"
+             BackgroundColor="Red"
+             Margin="0">
+    <ContentView.Content>
+        <StackLayout VerticalOptions="Start" Spacing="0" Margin="0">
+            <Button x:Name="btn" Text="{Binding Text}" WidthRequest="100" HeightRequest="40" HorizontalOptions="Center" Clicked="TapGestureRecognizer_Tapped" TextColor="White" CornerRadius="20"/>
+            <StackLayout Orientation="Horizontal" x:Name="tags" BindableLayout.ItemsSource="{Binding Tags}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <control:TagsView/>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

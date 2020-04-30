@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:mm="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tags.VideoPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                 <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <mm:VideoView Grid.Row="0" VideoAspect="AspectFit" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Source="https://www.youtube.com/embed/UF3eIv2W99g" ShowControls="False" />
+            <Label Grid.Row="1"  BackgroundColor="Red" Text="Hello workd"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

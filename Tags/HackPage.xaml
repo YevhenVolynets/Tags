@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:custom="clr-namespace:Tags;assembly=Tags" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="Red" x:Class="Tags.HackPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0" >
+            <ScrollView  x:Name="sv" Margin="0,100,0,0" HorizontalScrollBarVisibility="Never" Orientation="Horizontal" >
+                <Label Text="Long sdglsdglkdsjg sdlgkj sldkg lskdjg lksdjg lskdjg lskdjg lskdjg lsdg"/>
+            </ScrollView>
+            <ScrollView>
+                <StackLayout Spacing="0" Margin="0,200,0,0">
+            <Grid>
+                <custom:CustomControl HeightRequest="50" BackgroundColor="Transparent"/>
+                <Label TextColor="Red" FontAttributes="Bold" Text="Доставка майбутнього" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+            </Grid>
+            <BoxView HeightRequest="500" BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
